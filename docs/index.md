@@ -18,14 +18,14 @@
 * 1.将除sign以外的参数按参数名进行字典排序。
 ```json
 {
-    "apiKey":"AAAAA",
-    "apiSecret":"BBBBB",
-    "category":"1",
-    "price":"9000.1",
-    "qty":"1.2",
-    "symbol":"BTC/CAD",
-    "type":"1",
-    "sign":"b60743ad70bad7d1fc47777c0d58604e"
+    "apiKey":"AAAAA",
+    "apiSecret":"BBBBB",
+    "category":"1",
+    "price":"9000.1",
+    "qty":"1.2",
+    "symbol":"BTC/CAD",
+    "type":"1",
+    "sign":"b60743ad70bad7d1fc47777c0d58604e"
 }
 ```
 * 排序后按顺序拼接参数的值AAAAABBBBB19000.11.2BTC/CAD1。
@@ -50,21 +50,21 @@
 
 ```json
 {
-    "code":0,
-    "msg":"success",
-    "success":true,
-    "data":[
-        {
-            "id":1,
-            "marketId":21,
-            "open":1,
-            "high":1,
-            "low":1,
-            "close":1,
-            "qty":1,
-            "createTime":1557211356000
-        }
-    ]
+    "code":0,
+    "msg":"success",
+    "success":true,
+    "data":[
+        {
+            "id":1,
+            "marketId":21,
+            "open":1,
+            "high":1,
+            "low":1,
+            "close":1,
+            "qty":1,
+            "createTime":1557211356000
+        }
+    ]
 }
 ```
 
@@ -96,21 +96,21 @@
 
 ```json
 {
-    "code":0,
-    "msg":"success",
-    "data":{
-        "volume":85.98,
-        "symbol":"BTC/USDT",
-        "high":8889.87,
-        "last":8794.39,
-        "low":8709.73,
-        "buy":8710.99,
-        "sell":8840.69,
-        "id":91,
-        "changeRate":"+0.08%",
-        "open":8786.49
-    },
-    "success":true
+    "code":0,
+    "msg":"success",
+    "data":{
+        "volume":85.98,
+        "symbol":"BTC/USDT",
+        "high":8889.87,
+        "last":8794.39,
+        "low":8709.73,
+        "buy":8710.99,
+        "sell":8840.69,
+        "id":91,
+        "changeRate":"+0.08%",
+        "open":8786.49
+    },
+    "success":true
 }
 ```
 
@@ -144,35 +144,35 @@
 
 ```json
 {
-    "code":0,
-    "msg":"success",
-    "data":[
-        {
-            "volume":83.1,
-            "symbol":"BTC/USDT",
-            "high":8889.87,
-            "last":8787.47,
-            "low":8709.73,
-            "buy":8714.19,
-            "sell":8848.52,
-            "id":91,
-            "changeRate":"+0.01%",
-            "open":8786.49
-        },
-        {
-            "volume":0,
-            "symbol":"ETH/USDT",
-            "high":0,
-            "last":213.82,
-            "low":0,
-            "buy":212.09,
-            "sell":214.9,
-            "id":90,
-            "changeRate":"+0.00%",
-            "open":0
-        }
-    ],
-    "success":true
+    "code":0,
+    "msg":"success",
+    "data":[
+        {
+            "volume":83.1,
+            "symbol":"BTC/USDT",
+            "high":8889.87,
+            "last":8787.47,
+            "low":8709.73,
+            "buy":8714.19,
+            "sell":8848.52,
+            "id":91,
+            "changeRate":"+0.01%",
+            "open":8786.49
+        },
+        {
+            "volume":0,
+            "symbol":"ETH/USDT",
+            "high":0,
+            "last":213.82,
+            "low":0,
+            "buy":212.09,
+            "sell":214.9,
+            "id":90,
+            "changeRate":"+0.00%",
+            "open":0
+        }
+    ],
+    "success":true
 }
 ```
 
@@ -206,32 +206,32 @@
 
 ```json
 {
-    "code":0,
-    "msg":"success",
-    "data":{
-        "asks":[
-            {
-                "id":"3229af464d014b588e4d12b288d96c9e",
-                "price":8764.78,
-                "qty":0.084783,
-                "volume":743.10434274
-            },
-            {
-                "id":"6f93f30c1289441aa5756affe33c849b",
-                "price":8765.88,
-                "qty":0.050587,
-                "volume":443.43957156
-            },
-            {
-                "id":"498c4978e523469b96f8727e87c33088",
-                "price":8728.66,
-                "qty":0.056764,
-                "volume":495.47365624
-            }
-        ],
-        "ts":1590401000781
-    },
-    "success":true
+    "code":0,
+    "msg":"success",
+    "data":{
+        "asks":[
+            {
+                "id":"3229af464d014b588e4d12b288d96c9e",
+                "price":8764.78,
+                "qty":0.084783,
+                "volume":743.10434274
+            },
+            {
+                "id":"6f93f30c1289441aa5756affe33c849b",
+                "price":8765.88,
+                "qty":0.050587,
+                "volume":443.43957156
+            },
+            {
+                "id":"498c4978e523469b96f8727e87c33088",
+                "price":8728.66,
+                "qty":0.056764,
+                "volume":495.47365624
+            }
+        ],
+        "ts":1590401000781
+    },
+    "success":true
 }
 ```
 
@@ -259,30 +259,30 @@
 
 ```json
 {
-    "code":0,
-    "msg":"success",
-    "data":{
-        "tradeList":[
-            {
-                "id":794780,
-                "qty":0.060999,
-                "price":8868.13,
-                "type":2,
-                "createTime":1590399172000,
-                "doublePrice":8868.13
-            },
-            {
-                "id":794776,
-                "qty":0.022285,
-                "price":8870.43,
-                "type":2,
-                "createTime":1590399158000,
-                "doublePrice":8870.43
-            }
-        ],
-        "ts":1590399185283
-    },
-    "success":true
+    "code":0,
+    "msg":"success",
+    "data":{
+        "tradeList":[
+            {
+                "id":794780,
+                "qty":0.060999,
+                "price":8868.13,
+                "type":2,
+                "createTime":1590399172000,
+                "doublePrice":8868.13
+            },
+            {
+                "id":794776,
+                "qty":0.022285,
+                "price":8870.43,
+                "type":2,
+                "createTime":1590399158000,
+                "doublePrice":8870.43
+            }
+        ],
+        "ts":1590399185283
+    },
+    "success":true
 }
 ```
 
@@ -320,12 +320,12 @@
 
 ```json
 {
-    "code":0,
-    "msg":"success",
-    "data":{
-        "orderId":15
-    },
-    "success":true
+    "code":0,
+    "msg":"success",
+    "data":{
+        "orderId":15
+    },
+    "success":true
 }
 ```
 
@@ -351,10 +351,10 @@
 
 ```json
 {
-    "code": 0, 
-    "msg": "success", 
-    "data": "Order Cancelled!", 
-    "success": true
+    "code":0,
+    "msg":"success",
+    "data":"OrderCancelled!",
+    "success":true
 }
 ```
 
@@ -380,41 +380,41 @@
 
 ```json
 {
-    "code":0,
-    "msg":"success",
-    "data":[
-        {
-            "total":0,
-            "balance":0,
-            "coinName":"ETH",
-            "freezingBalance":0
-        },
-        {
-            "total":0,
-            "balance":0,
-            "coinName":"BTC",
-            "freezingBalance":0
-        },
-        {
-            "total":10000,
-            "balance":10000,
-            "coinName":"USDT",
-            "freezingBalance":0
-        },
-        {
-            "total":0,
-            "balance":0,
-            "coinName":"PAX",
-            "freezingBalance":0
-        },
-        {
-            "total":0,
-            "balance":0,
-            "coinName":"USDC",
-            "freezingBalance":0
-        }
-    ],
-    "success":true
+    "code":0,
+    "msg":"success",
+    "data":[
+        {
+            "total":0,
+            "balance":0,
+            "coinName":"ETH",
+            "freezingBalance":0
+        },
+        {
+            "total":0,
+            "balance":0,
+            "coinName":"BTC",
+            "freezingBalance":0
+        },
+        {
+            "total":10000,
+            "balance":10000,
+            "coinName":"USDT",
+            "freezingBalance":0
+        },
+        {
+            "total":0,
+            "balance":0,
+            "coinName":"PAX",
+            "freezingBalance":0
+        },
+        {
+            "total":0,
+            "balance":0,
+            "coinName":"USDC",
+            "freezingBalance":0
+        }
+    ],
+    "success":true
 }
 ```
 
@@ -444,31 +444,31 @@
 
 ```json
 {
-    "code":0,
-    "msg":"success",
-    "data":[
-        {
-            "createTime":1593602042000,
-            "price":9224.18,
-            "qty":0.079137,
-            "tradeQty":0,
-            "id":44788514,
-            "type":1,
-            "direction":2,
-            "status":0
-        },
-        {
-            "createTime":1593602042000,
-            "price":9105.72,
-            "qty":0.083102,
-            "tradeQty":0,
-            "id":44788513,
-            "type":1,
-            "direction":1,
-            "status":1
-        }
-    ],
-    "success":true
+    "code":0,
+    "msg":"success",
+    "data":[
+        {
+            "createTime":1593602042000,
+            "price":9224.18,
+            "qty":0.079137,
+            "tradeQty":0,
+            "id":44788514,
+            "type":1,
+            "direction":2,
+            "status":0
+        },
+        {
+            "createTime":1593602042000,
+            "price":9105.72,
+            "qty":0.083102,
+            "tradeQty":0,
+            "id":44788513,
+            "type":1,
+            "direction":1,
+            "status":1
+        }
+    ],
+    "success":true
 }
 ```
 
@@ -503,20 +503,20 @@
 
 ```json
 {
-    "code":0,
-    "msg":"success",
-    "data":[
-        {
-            "id":1,
-            "amount":12,
-            "qty":1,
-            "price":12,
-            "type":"buy",
-            "createTime":"2019-04-28 15:34:11.0",
-            "createTimeMs":2019
-        }
-    ],
-    "success":true
+    "code":0,
+    "msg":"success",
+    "data":[
+        {
+            "id":1,
+            "amount":12,
+            "qty":1,
+            "price":12,
+            "type":"buy",
+            "createTime":"2019-04-2815:34:11.0",
+            "createTimeMs":2019
+        }
+    ],
+    "success":true
 }
 ```
 
@@ -547,21 +547,21 @@
 
 ```json
 {
-    "code":0,
-    "msg":"success",
-    "data":[
-        {
-           "id": 23,
-            "marketName": "ETH/BTC",
-            "minTotal": 0.00100000,
-            "maxTotal": 10.00000000,
-            "minQty": 0.00100000,
-            "maxQty": 11.00000000,
-            "priceDecimals": 6,
-            "qtyDecimals": 3
-        }
-    ],
-    "success":true
+    "code":0,
+    "msg":"success",
+    "data":[
+        {
+            "id":23,
+            "marketName":"ETH/BTC",
+            "minTotal":0.001,
+            "maxTotal":10,
+            "minQty":0.001,
+            "maxQty":11,
+            "priceDecimals":6,
+            "qtyDecimals":3
+        }
+    ],
+    "success":true
 }
 ```
 
@@ -593,31 +593,31 @@
 
 ```json
 {
-    "code": 0,
-    "msg": "success",
-    "data": {
-        "id": "20405197",
-        "direction": 1,
-        "type": 1,
-        "price": 0.972893000000000000,
-        "qty": 273.400000000000000000,
-        "tradeQty": 0E-18,
-        "status": 1,
-        "detail": [
-            {
-                "amount": 663.366905600000000000000000000000,
-                "create_time": 1599883383000,
-                "price": 10351.360000000000000000,
-                "qty": 0.064085000000000000,
-                "fee": 0E-18,
-                "feeCoinName": "USDT",
-                "id": 2,
-                "createTimeMs": 1599883383000
-            }
-        ],
-        "createTime": 1604687659000
-    },
-    "success": true
+    "code":0,
+    "msg":"success",
+    "data":{
+        "id":"20405197",
+        "direction":1,
+        "type":1,
+        "price":0.972893,
+        "qty":273.4,
+        "tradeQty":0,
+        "status":1,
+        "detail":[
+            {
+                "amount":663.3669056,
+                "create_time":1599883383000,
+                "price":10351.36,
+                "qty":0.064085,
+                "fee":0,
+                "feeCoinName":"USDT",
+                "id":2,
+                "createTimeMs":1599883383000
+            }
+        ],
+        "createTime":1604687659000
+    },
+    "success":true
 }
 ```
 
