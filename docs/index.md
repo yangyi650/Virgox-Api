@@ -641,4 +641,3 @@
 | feeCoinName        |  String   | 手续费币种   |
 | id        |  String   | 成交id   |
 | createTimeMs        |  Long   | 成交时间 毫秒   |
-```
