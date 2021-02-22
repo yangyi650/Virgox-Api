@@ -1,7 +1,7 @@
 # Virgox Api
 
 * 本篇列出REST接口的baseurl:
-    **https://www.virgox.com**
+    **https://www.virgox.net**
 * 所有接口的响应都是JSON格式
 * 为保证接口正常访问，需联系客服提供ip地址
 
