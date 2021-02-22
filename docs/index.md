@@ -11,8 +11,8 @@
 
 | 参数        | 类型   |  是否必须   |  说明   |
 | :--------:   | :-----:  |  :-----:  |  :-----:  |
-| apiKey         | string   |  √   |  您的apiKey   |
-| sign          | string   |  √   |  请求签名   |
+| apiKey         | string   |  是   |  您的apiKey   |
+| sign          | string   |  是   |  请求签名   |
 
 ### 签名规则 
 * 1.将除sign以外的参数按参数名进行字典排序。
@@ -24,8 +24,7 @@
     "price":"9000.1",
     "qty":"1.2",
     "symbol":"BTC/CAD",
-    "type":"1",
-    "sign":"b60743ad70bad7d1fc47777c0d58604e"
+    "type":"1"
 }
 ```
 * 排序后按顺序拼接参数的值AAAAABBBBB19000.11.2BTC/CAD1。
@@ -77,7 +76,7 @@
 | low        |  Decimal   | 市场最低价   |
 | high        |  Decimal   | 市场最高价   |
 | close        |  Decimal   | 市场收盘价   |
-| open       |  Decimal   | 市场开票价   |
+| open       |  Decimal   | 市场开盘价   |
 | qty       |  Decimal   | 交易数量   |
 | createTime       |  Long   | 时间戳   |
 
@@ -122,9 +121,9 @@
 | low        |  Decimal   | 市场最低价   |
 | high        |  Decimal   | 市场最高价   |
 | last        |  Decimal   | 市场最新价   |
-| open       |  Decimal   | 市场开票价   |
-| sell       |  Decimal   | 交易数量   |
-| buy       |  Long   | 时间戳   |
+| open       |  Decimal   | 市场开盘价   |
+| sell       |  Decimal   | 卖一价   |
+| buy       |  Long   | 买一价   |
 | volume       |  Decimal   | 成交额（计价货币量） |
 | symbol       |  String   | 交易对   |
 | changeRate       |  Decimal   | 涨跌幅   |
@@ -184,12 +183,12 @@
 | low        |  Decimal   | 市场最低价   |
 | high        |  Decimal   | 市场最高价   |
 | last        |  Decimal   | 市场最新价   |
-| open       |  Decimal   | 市场开票价   |
+| open       |  Decimal   | 市场开盘价   |
 | volume       |  Decimal   | 成交额（计价货币量） |
 | symbol       |  String   | 交易对   |
 | changeRate       |  Decimal   | 涨跌幅   |
-| sell       |  Decimal   | 交易数量   |
-| buy       |  Long   | 时间戳   |
+| sell       |  Decimal   | 卖一价   |
+| buy       |  Long   | 买一价   |
 
 
 ## **市场深度**
@@ -212,21 +211,17 @@
         "asks":[
             {
                 "id":"3229af464d014b588e4d12b288d96c9e",
+                "marketId":8764.78,
                 "price":8764.78,
                 "qty":0.084783,
                 "volume":743.10434274
             },
             {
                 "id":"6f93f30c1289441aa5756affe33c849b",
+                "marketId":8764.78,
                 "price":8765.88,
                 "qty":0.050587,
                 "volume":443.43957156
-            },
-            {
-                "id":"498c4978e523469b96f8727e87c33088",
-                "price":8728.66,
-                "qty":0.056764,
-                "volume":495.47365624
             }
         ],
         "ts":1590401000781
@@ -240,6 +235,7 @@
 | 返回值        |  类型   | 说明 |
 | :--------:   | :-----:  | :-----:  |
 | id        |  String   | id   |
+| marketId        |  Int   | 市场id   |
 | price       |  Decimal   | 价格   |
 | volume       |  Decimal   | 销售额   |
 | qty       |  Decimal   | 数量   |
