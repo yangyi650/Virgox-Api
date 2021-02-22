@@ -307,9 +307,9 @@
 | symbol        | String   |  是  | 交易对(如btc/usdt) |
 | category        | Int   |  是  |1 限价单 2市价单|
 | type        | Int   |  是  |1 买入 2 卖出|
-| price        | Decimal   |  是  |价格(当订单类型是限价单时需传入，即 category=1时)   |
-| total        | Decimal   |  是  |  总额(当订单类型是市价单时并且是买入时传入，即 category=2并且type=1时total需要传入  |
-| qty        | Decimal   |  是  |  数量(限价单的买入卖出，市价单的卖出时传入)   |
+| price        | Decimal   |  否  |价格(当订单类型是限价单时需传入，即 category=1时)   |
+| total        | Decimal   |  否  |  总额(当订单类型是市价单时并且是买入时传入，即 category=2并且type=1时total需要传入  |
+| qty        | Decimal   |  否  |  数量(限价单的买入卖出，市价单的卖出时传入)   |
 
 
 **返回值说明**
@@ -508,8 +508,8 @@
             "qty":1,
             "price":12,
             "type":"buy",
-            "createTime":"2019-04-2815:34:11.0",
-            "createTimeMs":2019
+            "createTime":"2021-02-22 11:21:07",
+            "createTimeMs":1613964067000
         }
     ],
     "success":true
@@ -547,14 +547,16 @@
     "msg":"success",
     "data":[
         {
-            "id":23,
-            "marketName":"ETH/BTC",
-            "minTotal":0.001,
-            "maxTotal":10,
-            "minQty":0.001,
-            "maxQty":11,
-            "priceDecimals":6,
-            "qtyDecimals":3
+            "id":91,
+            "marketName":"BTC/USDT",
+            "categoryCoin":"USDT",
+            "marketCoin":"BTC",
+            "minTotal":1,
+            "maxTotal":10000,
+            "minQty":0.0001,
+            "maxQty":0.31,
+            "priceDecimals":2,
+            "qtyDecimals":6
         }
     ],
     "success":true
@@ -567,12 +569,14 @@
 | :--------:   | :-----:  | :-----:  |
 | id        |  Int   | id   |
 | marketName        |  String   | 市场名称  |
+| categoryCoin        |  String   | 计价货币  |
+| marketCoin        |  String   | 基础货币  |
 | minTotal        |  Decimal   | 最小交易额  |
 | maxTotal        |  Decimal   | 最大交易额  |
 | minQty        |  Decimal   | 最小交易数   |
 | maxQty        |  Decimal   | 最大交易数   |
-| priceDecimal        |  Decimal   | 价格精度   |
-| qtyDecimal        |  Decimal   | 数量精度   |
+| priceDecimal        |  Decimal   | 价格小数位   |
+| qtyDecimal        |  Decimal   | 数量小数位   |
 
 ## **查询订单详情**
 
