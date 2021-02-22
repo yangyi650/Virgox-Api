@@ -3,6 +3,8 @@
 * 本篇列出REST接口的baseurl:
     **https://www.virgox.com**
 * 所有接口的响应都是JSON格式
+* 为保证接口正常访问，需联系客服提供ip地址
+
 
 ----
 ## 接口鉴权和签名 
