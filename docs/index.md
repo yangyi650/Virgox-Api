@@ -774,7 +774,6 @@
                 "fee": 5.000000000000000000,
                 "memo": null,
                 "txId": null,
-                "remark": "24小时单次提币估值小于3000 USD直接通过主钱包余额不足、{\"code\":-1,\"msg\":\"地址:0x3a6b70499cc154475681dd3dd1c50e1a0d18ac25,获取余额失败\",\"success\":false}",
                 "updateTime": 1616990583,
                 "toAddress": "0x51e7122ccf2d1dad8328720276858e3525392877",
                 "coinId": 20,
@@ -823,5 +822,4 @@
 | qty        |  Decimal   | 提现数量   |
 | fee        |  Decimal   | 提现手续费 |
 | browser        |  String   | 区块浏览器地址   |
-| remark        |  String   | 备注   |
 | createTime        |  Long   | 提现时间   |
