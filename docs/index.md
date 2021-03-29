@@ -299,6 +299,7 @@
 ## **下单**
 
 * POST `/apis/api/member/addOrder`
+***(注意：API下单时需关闭交易密码)***
 
 **请求参数**
 
@@ -589,6 +590,7 @@
 | 参数        | 类型   |  是否必须   |  说明   |
 | :--------:   | :-----:  |  :-----:  |  :-----:  |
 | apikey        | String   |  是  |  apiKey|
+| sign        | String   |  是  |  参数签名|
 | orderId        | String   |  是  |  订单id|
 
 **返回值**
@@ -643,3 +645,183 @@
 | feeCoinName        |  String   | 手续费币种   |
 | id        |  String   | 成交id   |
 | createTimeMs        |  Long   | 成交时间 毫秒   |
+
+
+## **查询充值记录**
+
+* POST `/apis/api/member/rechargeRecords`
+
+**请求参数**
+
+| 参数        | 类型   |  是否必须   |  说明   |
+| :--------:   | :-----:  |  :-----:  |  :-----:  |
+| apikey        | String   |  是  |  apiKey|
+| sign        | String   |  是  |  参数签名|
+| coinName        | String   |  否  |  币种名称|
+
+**返回值**
+
+```json
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "total": 3,
+        "list": [
+            {
+                "coinType": 4,
+                "blockConfirm": 0,
+                "memo": null,
+                "txId": null,
+                "remark": null,
+                "updateTime": 1612775730,
+                "type": 1,
+                "toAddress": null,
+                "coinId": 10,
+                "createTime": 1612775702,
+                "browser": "https://www.omniexplorer.info/tx/",
+                "qty": 100000.000000000000000,
+                "fromAddress": null,
+                "id": 3,
+                "coinName": "USDT",
+                "blockConfirmTotal": 2,
+                "status": "completed"
+            },
+            {
+                "coinType": 2,
+                "blockConfirm": 0,
+                "memo": null,
+                "txId": null,
+                "remark": null,
+                "updateTime": 1612775730,
+                "type": 1,
+                "toAddress": null,
+                "coinId": 2,
+                "createTime": 1612775702,
+                "browser": "https://btc.com/",
+                "qty": 100.000000000000000,
+                "fromAddress": null,
+                "id": 2,
+                "coinName": "BTC",
+                "blockConfirmTotal": 2,
+                "status": "completed"
+            }
+        ],
+        "pageNum": 1,
+        "pageSize": 10,
+        "size": 3,
+        "startRow": 1,
+        "endRow": 3,
+        "pages": 1,
+        "prePage": 0,
+        "nextPage": 0,
+        "isFirstPage": true,
+        "isLastPage": true,
+        "hasPreviousPage": false,
+        "hasNextPage": false,
+        "navigatePages": 8,
+        "navigatepageNums": [
+            1
+        ],
+        "navigateFirstPage": 1,
+        "navigateLastPage": 1
+    },
+    "success": true
+}
+```
+
+**返回值说明**
+
+| 返回值        |  类型   | 说明 |
+| :--------:   | :-----:  | :-----:  |
+| id        |  Int   | 充值记录id   |
+| coinName        |  String   | 币种名称   |
+| status        |  Int   | 充值状态  processing 进行中  completed 已完成  failed 充值失败|
+| blockConfirm        |  Int   | 区块确认数 |
+| blockConfirmTotal        |  Int   | 入账所需区块确认数 |
+| memo        |  Stirng   | memo  |
+| txId        |  String   | 哈希值   |
+| fromAddress        |  String   | 充值来源地址   |
+| toAddress        |  String   | 充值地址   |
+| qty        |  Decimal   | 充值数量   |
+| browser        |  String   | 区块浏览器地址   |
+| createTime        |  Long   | 创建时间   |
+
+
+## **查询提现记录**
+
+* POST `/apis/api/member/withdrawRecords`
+
+**请求参数**
+
+| 参数        | 类型   |  是否必须   |  说明   |
+| :--------:   | :-----:  |  :-----:  |  :-----:  |
+| apikey        | String   |  是  |  apiKey|
+| sign        | String   |  是  |  参数签名|
+| coinName        | String   |  否  |  币种名称|
+
+**返回值**
+
+```json
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "total": 1,
+        "list": [
+            {
+                "coinType": 3,
+                "fee": 5.000000000000000000,
+                "memo": null,
+                "txId": null,
+                "remark": "24小时单次提币估值小于3000 USD直接通过主钱包余额不足、{\"code\":-1,\"msg\":\"地址:0x3a6b70499cc154475681dd3dd1c50e1a0d18ac25,获取余额失败\",\"success\":false}",
+                "updateTime": 1616990583,
+                "toAddress": "0x51e7122ccf2d1dad8328720276858e3525392877",
+                "coinId": 20,
+                "createTime": 1612878285,
+                "browser": "https://eth.btc.com/txinfo/",
+                "qty": 2900.000000000000000000,
+                "fromAddress": null,
+                "id": 2,
+                "coinName": "USDT",
+                "status": "processing"
+            }
+        ],
+        "pageNum": 1,
+        "pageSize": 10,
+        "size": 1,
+        "startRow": 1,
+        "endRow": 1,
+        "pages": 1,
+        "prePage": 0,
+        "nextPage": 0,
+        "isFirstPage": true,
+        "isLastPage": true,
+        "hasPreviousPage": false,
+        "hasNextPage": false,
+        "navigatePages": 8,
+        "navigatepageNums": [
+            1
+        ],
+        "navigateFirstPage": 1,
+        "navigateLastPage": 1
+    },
+    "success": true
+}
+```
+
+**返回值说明**
+
+| 返回值        |  类型   | 说明 |
+| :--------:   | :-----:  | :-----:  |
+| id        |  Int   | 提现记录id   |
+| coinName        |  String   | 币种名称   |
+| status        |  Int   | 提现状态 processing 进行中  completed 已完成  failed 提现失败 |
+| memo        |  Stirng   | memo  |
+| txId        |  String   | 哈希值   |
+| toAddress        |  String   | 提现地址   |
+| qty        |  Decimal   | 提现数量   |
+| fee        |  Decimal   | 提现手续费 |
+| browser        |  String   | 区块浏览器地址   |
+| remark        |  String   | 备注   |
+| createTime        |  Long   | 提现时间   |
